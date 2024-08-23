@@ -1,0 +1,26 @@
+include pug/modal.pug
+
+doctype html
+html(lang='ru')
+  include pug/head.pug
+  body#pageMain
+    .pagewrapper
+      include pug/header.html
+      main
+        include pug/promo.html
+        include pug/progress.pug
+        include pug/business.pug
+        include pug/support.pug
+        include pug/business-tire.pug
+        include pug/support-tire.pug
+        include pug/franchise.pug
+      include pug/footer.pug
+
+    include pug/modal-policy.html
+    +modal('modal-1', 'Узнайте о перспективах сотрудничества по франшизе «Форсаж»', 'Скачать бизнес-план')
+    +modal('modal-2', 'Закажите звонок и задайте вопросы о сотрудничестве менеджеру', 'Заказать звонок')
+    +modal('modal-3', 'Получите презентацию франшизы «Форсаж»', 'Получить презентацию')
+    +modal('modal-4', 'Получите пошаговый план запуска бизнеса', 'Получить план запуска')
+    +modal('modal-5', 'Получите индивидуальное предложение о сотрудничестве', 'Получить предложение')
+
+    include pug/scripts.pug

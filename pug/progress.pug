@@ -1,0 +1,38 @@
+-
+  var progressHistoryItems = [
+    {
+      year: '2004',
+      text: 'Открытие первой точки с использованием новейшего оборудования. Заняли лидирующее положение в городе в первый год работы.'
+    },
+    {
+      year: '2010',
+      text: 'Открыли автосервис, где оказываются услуги по сход-развалу, тонировке, а также имеются слесарные боксы, автомойка.'
+    },
+    {
+      year: '2019',
+      text: 'Мотошиномонтаж был выделен в отдельное направление и затем перерос в полноценный мотосервис.'
+    },
+    {
+      year: '2021',
+      text: 'Открыт шиномонтаж на 2 бокса с участком покраски и восстановления колёс.'
+    },
+  ]
+
+section.progress
+  .container
+    h2.title.progress-title Постоянное развитие — это залог нашего успеха
+    .progress-slider.splide
+      .splide__track
+        .splide__list.progress-slider-wrapper
+          each item in progressHistoryItems
+            .progress-history-item.splide__slide
+              .progress-history-item-top
+                span= item.year
+                if item.year !== '2021'
+                  img(src='img/progress/arrow.svg', alt='arrow')
+              .progress-history-item-text= item.text
+    .progress-bottom-wrapper
+      .progress-bottom-left-text На протяжении всего времени работы шёл постоянный поиск, а также реализация новых услуг, позволяющих выровнять сезонные колебания бизнеса. Опробировано на практике огромное количество ноу-хау на основном шинном направлении.
+      .progress-bottom-right-wrapper
+        img(src='img/progress/suitcase.svg', alt='suitcase')
+        p Наш накопленный опыт вы получаете в виде готовой бизнес-модели.

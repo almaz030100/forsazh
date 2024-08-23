@@ -1,0 +1,25 @@
+.franchise {
+  padding: int(80,130) 0 int(80,140);
+  background: url("../img/franchise/bg.jpg") center center / cover no-repeat;
+}
+
+.franchise-title {
+  color: rgb(255, 255, 255);
+  font-size: int(30,50);
+  max-width: 1036px;
+  margin: 0 auto;
+}
+
+.franchise-subtitle {
+  margin-top: 10px;
+  color: rgb(255, 209, 117);
+  font-weight: 700;
+}
+
+.franchise-text {
+  margin: int(40,70) auto 0;
+  color: rgb(255, 255, 255);
+  font-size: int(20,28);
+  font-weight: 700;
+  max-width: 963px;
+}

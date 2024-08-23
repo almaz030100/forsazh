@@ -1,0 +1,152 @@
+.business {
+  padding: int(80, 130) 0 int(80, 140);
+  background: url("../img/business/bg.jpg") center center / cover no-repeat;
+  color: #fff;
+}
+
+.business-title {
+  max-width: 904px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.business-subtitle {
+  margin-top: int(40, 64);
+  font-size: int(18, 25);
+}
+
+.business-blocks {
+  margin-top: int(40, 70);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: int(25, 50);
+  @include media(991) {
+    grid-template-columns: 100%;
+  }
+}
+
+.business-block {
+  padding: int(30, 50) int(20, 50);
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  background: rgb(255, 255, 255);
+  color: #000;
+}
+
+.business-block-title {
+  margin-bottom: 30px;
+  color: rgb(224, 166, 49);
+  font-size: int(20, 25);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.business-block-list {
+  display: flex;
+  flex-direction: column;
+  gap: int(20, 30);
+  font-size: int(15, 20);
+
+  li {
+    display: flex;
+    gap: int(10, 20);
+    align-items: flex-start;
+
+    img {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.business-block-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 298px) auto;
+  gap: 20px;
+  @include media(575) {
+    grid-template-columns: 100%;
+    gap: 30px;
+  }
+}
+
+.business-block-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: int(20, 25);
+
+  img {
+    height: int(40, 54);
+  }
+
+  @include media(575) {
+    gap: 10px;
+  }
+}
+
+.business-block-grid-title {
+  font-size: int(16, 20);
+  font-weight: 700;
+}
+
+.business-block-grid-list {
+  list-style-type: disc;
+  font-size: int(15, 20);
+  padding-left: 20px;
+}
+
+.business-block-grid-text {
+  font-size: int(15, 20);
+}
+
+.business-bottom-slider {
+  margin-top: int(40,70);
+}
+
+.business-bottom-items {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: int(25,50);
+  @include media(991) {
+    display: flex !important;
+    gap: 0;
+  }
+}
+
+.business-bottom-item {
+  text-align: center;
+}
+
+.business-bottom-item-title {
+  color: rgb(255, 209, 117);
+  font-size: int(18,25);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.business-bottom-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: int(12,20);
+  font-family: Unbounded, sans-serif;
+  font-size: int(15,20);
+  font-weight: 800;
+  text-transform: uppercase;
+  strong {
+    font-size: int(20,35);
+    font-weight: 800;
+  }
+}
+
+.business-button {
+  margin: int(40,74) auto 0;
+}
+
+.business-tire-title {
+  max-width: 995px;
+}
+
+.business-tire {
+  background-image: url("../img/business/bg-tire.jpg");
+}

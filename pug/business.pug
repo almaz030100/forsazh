@@ -1,0 +1,78 @@
+-
+  var businessAdvantagesList = [
+    'Готовый и отлаженный процесс работы автосервиса, который уже доказал свою эффективность на рынке.',
+    'Готовые маркетинговые решения и рекламные материалы для привлечения и удержания клиентов.',
+    'Обеспечение специализированным ПО для управления сервисом, клиентами и складом.',
+  ]
+
+-
+  var businessBlockGridList = [
+    '2 мастера-универсала',
+    '2 шиномонтажника',
+    'мастер по правке дисков',
+    'тонировщик',
+    'бухгалтер на аутсорсе',
+  ]
+
+-
+  var businessBottomItems = [
+    {
+      title: 'Инвестиции',
+      text: '<p><strong>4 568 000</strong> ₽</p>'
+    },
+    {
+      title: 'Окупаемость',
+      text: '<p><strong>15</strong> месяцев</p>'
+    },
+    {
+      title: 'Размер роялти',
+      text: '<span>с 2-го месяца — 2,5% от выручки</span> <span>с 4-го месяца — 5% от выручки</span>'
+    },
+    {
+      title: 'Средняя ежемесячная выручка',
+      text: '<span>В сезон — до 2 500 000 ₽</span> <span>В остальные месяцы — до 850 000 ₽</span>'
+    },
+    {
+      title: 'Средняя ежемесячная чистая прибыль',
+      text: '<span>В сезон — до 1 000 000 ₽</span> <span>В остальные месяцы — до 400 000 ₽</span>'
+    },
+    {
+      title: 'Ориентировочный доход за 2 года сотрудничества',
+      text: '<p><strong>9 243 000</strong> ₽</p>'
+    },
+  ]
+
+section.business
+  .container
+    h2.title.business-title.tac Бизнес-модель «Автосервис» в деталях
+    p.business-subtitle.tac Оказывайте услуги автосервиса полного цикла по отлаженной технологии в своём регионе.
+    .business-blocks
+      .business-block
+        .business-block-title Преимущества
+        ul.business-block-list
+          each item in businessAdvantagesList
+            li
+              img(src='img/business/check.svg', alt='check')
+              span= item
+      .business-block
+        .business-block-title Ресурсы для открытия
+        .business-block-grid
+          div.business-block-grid-item
+            img.business-block-grid-img(src='img/business/resource-1.svg', alt='resource-1')
+            .business-block-grid-title Персонал:
+            ul.business-block-grid-list
+              each item in businessBlockGridList
+                li= item
+          div.business-block-grid-item
+            img.business-block-grid-img(src='img/business/resource-2.svg', alt='resource-2')
+            .business-block-grid-title Помещение:
+            p.business-block-grid-text от 200 м2
+    .business-bottom-slider.splide#business-slider-1
+      .splide__track
+        .splide__list.business-bottom-items
+          each item in businessBottomItems
+            .business-bottom-item.splide__slide
+              .business-bottom-item-title= item.title
+              .business-bottom-item-text !{item.text}
+    button.button.business-button(data-fancybox, href='#modal-3')
+      span Получить презентацию

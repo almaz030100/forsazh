@@ -1,0 +1,87 @@
+@keyframes slideme {
+  0% {
+    left: -30px;
+    margin-left: 0
+  }
+  30%, to {
+    left: 110%;
+    margin-left: 80px
+  }
+}
+
+.button {
+  display: block;
+  flex-shrink: 0;
+  width: 560px;
+  padding: 0 20px;
+  max-width: 100%;
+  height: int(60,100);
+  box-shadow: inset 0 3px 0 0 rgba(255, 255, 255, 0.5);
+  background: linear-gradient(225deg, #ffa100 0%, #ff4d00 100%);
+  border-radius: int(60,100);
+  border-style: none;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+
+  span {
+    position: relative;
+    z-index: 1;
+    font-size: int(16, 25);
+    font-weight: 700;
+    font-family: 'Unbounded', sans-serif;
+    text-transform: uppercase;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 3px 0 0 rgba(255, 255, 255, 0.5);
+    background: linear-gradient(225deg, #ffc272 0%, #ff7031 100%);
+    opacity: 0;
+    transition: 0.5s all;
+    pointer-events: none;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    &::before {
+      box-shadow: inset 0 3px 0 0 rgba(255, 255, 255, 0.5);
+      background: linear-gradient(225deg, #ff4d00 0%, #ffa100 100%);
+      transition: none;
+    }
+    box-shadow: none;
+    transition: none;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    animation-delay: .05s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-name: slideme;
+    animation-timing-function: ease-in-out;
+    background: linear-gradient(0deg, #fff, hsla(0, 0%, 100%, .01));
+    height: 300px;
+    left: -90px;
+    margin-left: 60px;
+    top: -150px;
+    transform: rotate(45deg);
+    transition: all .3s;
+    width: 25px;
+    z-index: 0;
+    pointer-events: none;
+  }
+}
