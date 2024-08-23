@@ -110,8 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Аккордеоны
   if (isMainPage) {
-    new ItcAccordion('#accordion-1', {alwaysOpen: true})
-    new ItcAccordion('#accordion-2', {alwaysOpen: true})
+    new ItcAccordion('#accordion-1', {alwaysOpen: false})
+    new ItcAccordion('#accordion-2', {alwaysOpen: false})
   }
 
   // Устанавливаем текущий год в футере

@@ -36,8 +36,8 @@ section.support.support-tire
   .container
     h2.title.support-title Полная поддержка на старте в рамках концепции «Шиномонтаж»
     .accordion#accordion-2
-      each item in supportAccordionItems
-        .itc-accordion-item
+      each item, idx in supportAccordionItems
+        .itc-accordion-item(class={'itc-accordion-item-show': idx === 0})
           .itc-accordion-header= item.title
           .itc-accordion-body
             .itc-accordion-content
